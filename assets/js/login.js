@@ -78,7 +78,7 @@ $(function () {
                 //4.2将登录成功得到的token字符串保存到localStorage中
                 localStorage.setItem('token', res.token);
                 //4.3登录成功后跳转到首页
-                location.href = 'index/html';
+                location.href = 'index.html';
             }
         })
     })
