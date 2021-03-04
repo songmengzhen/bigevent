@@ -13,13 +13,15 @@ $(function () {
     $image.cropper(options)
 
     //给上传按钮添加点击事件
-    $('.layui-btn').on('click', function () {
+    $('.btnAdd').on('click', function () {
         //模拟人为点击上传文件选择框
+        // console.log("++++++++++")
         $('#file').click();
     })
     //为文件选择绑定change事件
     $('#file').on('change', function (e) {
         //获取用户选择的文件
+        // console.log("-----------")
         var filelist = e.target.files;
         if (filelist.length === 0) {
             return layui.layer.msg('请选择要上传的照片')
@@ -41,7 +43,7 @@ $(function () {
                 height: 100
             })
             .toDataURL('image/png') // 将 Canvas 画布上的内容，转化为 base64 格式的字符串
-        //调用接口，把头像上传到服务器
+        // 调用接口，把头像上传到服务器
         $.ajax({
             type: 'post',
             url: '/my/update/avatar',

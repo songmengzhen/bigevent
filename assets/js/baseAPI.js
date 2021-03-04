@@ -4,7 +4,7 @@
 $.ajaxPrefilter(function (options) {
     //在发起真正的请求前 统一拼接请求的根路径
     options.url = 'http://ajax.frontend.itheima.net' + options.url;
-    // options.url = 'http://www.liulongbin.top:3007' + options.url;
+    //options.url = 'http://www.liulongbin.top:3007' + options.url;
 
     //在有权限的地方设置统一的请求头 方便后期使用
     if (options.url.indexOf('/my/') !== -1) {
